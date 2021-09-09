@@ -1,0 +1,72 @@
+.container {
+    border: 1px solid black;
+    border-radius: .3em;
+    padding: .4em .8em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 35em;
+    min-width: 25em;
+}
+
+.container._column {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.container._column > * + * {
+    margin-top: .8em;
+}
+
+.container:not(._column) > * + * {
+    margin-left: .4em;
+}
+
+.name {
+    font-size: 1rem;
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: bolder;
+    margin: 0 .4em;
+}
+
+.property {
+    margin: 0 .4em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.property_value {
+    white-space: normal;
+    font-weight: lighter;
+    font-size: .8em;
+}
+
+.edit_box {
+    display: flex;
+}
+
+.edit_box > * + * {
+    margin-left: .2em;
+}
+
+.property > * + * {
+    margin-left: .4em;
+}
+
+.btn_box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.btn_box > * + * {
+    margin-left: 8px;
+}
+
+.btn_box > button {
+    padding: .5em;
+}

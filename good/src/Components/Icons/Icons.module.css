@@ -1,0 +1,19 @@
+.container {
+    min-width: 1rem;
+    min-height: 1rem;
+    cursor: pointer;
+}
+
+.container > svg {
+    transition: fill .2s ease-out;
+    fill: #555252
+}
+
+.container:hover > svg {
+    fill: #1a1b1f;
+}
+
+.container._disabled {
+    opacity: .5;
+    cursor: default;
+}

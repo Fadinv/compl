@@ -1,0 +1,40 @@
+.container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.container > * + * {
+    margin-left: .4rem;
+}
+
+.add_btn {
+    width: 1rem;
+    height: 1rem;
+    /*font-size: .7em;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .2em .4em;
+    border-radius: 50%;
+    border: 1px solid rgb(11, 125, 14);
+    background-color: #fff;
+    color: rgb(11, 125, 14);
+    transition: background-color .2s ease-out;
+}
+
+.add_btn._disabled {
+    opacity: .5;
+    cursor: default;
+}
+
+.add_btn:hover:not(._disabled) {
+    background-color: rgba(11, 125, 14, .25);
+}
+
+.product_name {
+    font-size: .7em;
+    padding: .3em;
+
+}

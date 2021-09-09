@@ -1,0 +1,9 @@
+.back_btn {
+    cursor: pointer;
+    background-color: white;
+    outline: none;
+    border-radius: .2em;
+    border: 1px solid black;
+    padding: .2em;
+    margin-top: .2em;
+}

@@ -1,0 +1,32 @@
+version: "3.7"
+
+volumes:
+  db_volume:
+
+services:
+  db:
+    image: postgres
+    restart: always
+    volumes:
+      - db_volume:/data/db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - '5432:5432'
+
+  serv:
+    build: serv/
+    restart: always
+    environment:
+      PORT: 4000
+    depends_on:
+      - db
+    ports:
+      - '4000:4000'
+
+  react:
+    build: good/
+    restart: always
+    ports:
+      - '3000:3000'
